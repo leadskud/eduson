@@ -102,6 +102,21 @@
   .stickycta .t b{color:var(--ink);font-size:14px}
   .stickycta .btn{padding:11px 18px;font-size:15px;box-shadow:none}
   @media(max-width:760px){.stickycta{display:flex}}
+
+  /* mobile-CRO (2026-06-12): компактный hero-CTA выше длинного dek на мобайле */
+  @media(max-width:760px){
+    .wrap.hero{display:flex;flex-direction:column}
+    .wrap.hero > *{order:5}
+    .wrap.hero .kicker{order:1}
+    .wrap.hero h1{order:2}
+    .wrap.hero .giftcard{order:3}
+    .wrap.hero .herocta{order:4;margin:14px 0 6px}
+    .wrap.hero .dek{order:6}
+    .wrap.hero .microtrust{order:7}
+    .wrap.hero .byline{order:8}
+    .wrap.hero .herocta .btn.ghost{display:none}
+    .wrap.hero .herocta .btn{width:100%;text-align:center;padding:14px 22px}
+  }
 </style>
 </head>
 <body>
@@ -113,7 +128,7 @@
   </div>
 </header>
 
-<div class="wrap">
+<div class="wrap hero">
   <span class="kicker">Цифровые навыки · нейросети на практике · онлайн из любой страны</span>
   <h1>Нейросети уже в каждой профессии — а вы пока смотрите на них со стороны</h1>
   <p class="dek">Освоить ИИ для работы, своих задач и небольшого бизнеса можно без переезда и без чужого языка. Онлайн-курсы Академии Эдюсон идут на русском, учиться можно из любой точки мира и в своём темпе. По заявлению академии, упор — на практику: тренажёры и кейсы вместо скучных вебинаров.</p>
